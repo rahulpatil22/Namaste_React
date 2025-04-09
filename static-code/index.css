@@ -1,0 +1,50 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.logo {
+  width: 100px;
+}
+
+.nav-items {
+  padding: 0px 20px;
+}
+
+.nav-items > ul {
+  font-size: 24px;
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-items > ul > li {
+  padding: 10 px;
+  margin: 10px;
+}
+
+.rest-card {
+    margin: 5px;
+  padding: 5px;
+  width: 120px;
+  height: 300px;
+}
+
+.rest-card:hover {
+  border: 1px solid black;
+  cursor: pointer;
+  
+}
+.rest-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search {
+  padding: 10px;
+}
+
+.rest-logo {
+  margin: 5px;
+  width: 100%;
+}
