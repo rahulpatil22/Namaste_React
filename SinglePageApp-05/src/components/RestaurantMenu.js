@@ -1,0 +1,71 @@
+import React, { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
+import { useParams } from "react-router-dom";
+import { MENU_API } from "../../utils/constants";
+
+const RestaurantMenu = () => {
+  const [restInfo, setRestInfo] = useState(null);
+
+  const { resID } = useParams();
+
+  // const param = useParams();
+  // console.log(param)
+
+  useEffect(() => {
+    fetchMenu();
+  }, []);
+
+  const fetchMenu = async () => {
+    const data = await fetch(MENU_API + resID);
+
+    const json = await data.json();
+
+    setRestInfo(json.data);
+  };
+
+  if (restInfo === null) {
+    return <Shimmer />;
+  }
+
+  const { name, costForTwoMessage, cuisines } =
+    restInfo?.cards[2]?.card?.card?.info || {};
+
+  //   const { itemCards } =
+  //     restInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1].card?.card?.itemCards || [];
+  //     console.log(itemCards)
+
+  const cards =
+    restInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards || [];
+
+  let itemCards =
+    cards.find((c) => c?.card?.card?.itemCards)?.card?.card?.itemCards || [];
+  console.log(itemCards);
+
+  return (
+    <div className="menu">
+      <h1>{name}</h1>
+      <p>
+        {cuisines && cuisines.length > 0
+          ? cuisines.join(", ")
+          : "Cuisines not available"}{" "}
+        - {costForTwoMessage}
+      </p>
+
+      <h2>Menu</h2>
+      <ul>
+        {itemCards.map((item) => (
+          <li key={item.card.info.id}>
+            {item.card.info.name} - {"Rs."}
+            {item.card.info.defaultPrice / 100 || item.card.info.price / 100}
+          </li>
+        ))}
+        {/* <li>{itemCards[0].card.info.name}</li>
+        <li>{itemCards[1].card.info.name}</li>
+        <li>{itemCards[2].card.info.name}</li>
+        <li>{itemCards[3].card.info.name}</li> */}
+      </ul>
+    </div>
+  );
+};
+
+export default RestaurantMenu;
