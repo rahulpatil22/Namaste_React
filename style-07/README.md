@@ -38,7 +38,7 @@ babel , jsx , React Component , React Composition
 import export ,hook-useState
 react algorithm - recounciliation , diff algorithm ,react fiber , increamental rendering , 
 dynamic page using- fetch- mockdata(JSON)
-functionality - filter
+functionality - filter with top rated restaurants
 
 # Exploring
 dynamic page using- fetch- SWIGGY LIVE API-JSON
@@ -57,6 +57,7 @@ React Component-lifecycle
 
 # Performace Optimization
 Custome Hook , Lazy Loading, Suspense
+functionality - status online , offline
 
 # style
 tailwind css
