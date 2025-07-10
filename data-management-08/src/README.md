@@ -32,7 +32,7 @@ babel , jsx , React Component , React Composition
  static page
 
 #  show me your code
- =>dynamic page using - props , key ,json
+ dynamic page using - props , key ,json
 
 # Hooks
 import export ,hook-useState
@@ -63,4 +63,10 @@ functionality - status online , offline
 tailwind css
 explore-styled component , material UI , ant design ,dark mode
 
-# Data Management
+# Data Management 01
+Higher Order Component ,Higher OrderFunction/Pure function,state lifting up,
+controlled and uncontrolled component,prop drilling , useContext(Context API)
+functionality- add discount , lable to card,detail menu cards using accordian(hide and expandeble)
+               LogIn User name across all component , input box for change username live 
+
+# Data Management 02
