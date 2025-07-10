@@ -84,17 +84,18 @@ functionality- add discount , lable to card,detail menu cards using accordian(hi
 functionality - add item from ItemList in cart
               - clear the cart
 
+
 # Types of Testing(developer)
 - Unit Testing
-  install React Testing liabrary
-  install jest
-  configure babel
-  install babel dependecies
-  configure parcel config file to disable default babel transpilation
-  jest configuration - npx jest --init
-  install jsdom liabrary
-  install @babel/preset-react - to make JSX work in test cases
-  include @babel/preset-react inside my babel config
+ - install React Testing liabrary
+  - install jest
+  - configure babel
+  - install babel dependecies
+  - configure parcel config file to disable default babel transpilation
+  - jest configuration - npx jest --init
+   - install jsdom liabrary
+-  install @babel/preset-react - to make JSX work in test cases
+- include @babel/preset-react inside my babel config
 - Integration Testing
 - End to End Testing - e2e testing
 - npm i -D install @testing-library/jest-dom
